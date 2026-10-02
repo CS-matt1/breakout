@@ -17,12 +17,12 @@ static partial class Program
         if (Raylib.IsKeyDown(KeyboardKey.Left))
         {
             positionRaquette.X -= VITESSE_RAQUETTE * dt;
-            positionRaquette.X = Math.Clamp(positionRaquette.X, 0, HAUTEUR - 80);
+            positionRaquette.X = Math.Clamp(positionRaquette.X, 0, LARGEUR - 80);
         }
         if (Raylib.IsKeyDown(KeyboardKey.Right))
         {
             positionRaquette.X += VITESSE_RAQUETTE * dt;
-            positionRaquette.X = Math.Clamp(positionRaquette.X, 0, HAUTEUR - 80);
+            positionRaquette.X = Math.Clamp(positionRaquette.X, 0, LARGEUR - 100);
         }
     }
 
