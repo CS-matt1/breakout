@@ -14,10 +14,21 @@ static partial class Program
     /// <summary>Déplace la raquette avec les flèches, sans sortir de la fenêtre.</summary>
     static void DeplacerRaquette(float dt)
     {
+        if (Raylib.IsKeyDown(KeyboardKey.Left))
+        {
+            positionRaquette.X -= VITESSE_RAQUETTE * dt;
+            positionRaquette.X = Math.Clamp(positionRaquette.X, 0, HAUTEUR - 80);
+        }
+        if (Raylib.IsKeyDown(KeyboardKey.Right))
+        {
+            positionRaquette.X += VITESSE_RAQUETTE * dt;
+            positionRaquette.X = Math.Clamp(positionRaquette.X, 0, HAUTEUR - 80);
+        }
     }
 
     /// <summary>Fait rebondir la balle si elle touche la raquette.</summary>
     static void RebondirSurRaquette()
     {
+    
     }
 }

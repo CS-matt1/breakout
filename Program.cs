@@ -45,6 +45,11 @@ static partial class Program
     /// <summary>Remet le jeu dans son état de départ.</summary>
     static void Reinitialiser()
     {
+        RectangleRaquette();
+        positionRaquette.X = LARGEUR / 2;
+
+        positionRaquette.Y = MARGE_BAS_RAQUETTE;
+        
     }
 
     /// <summary>Une image de jeu dans l'état Attente.</summary>
