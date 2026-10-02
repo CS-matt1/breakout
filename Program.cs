@@ -62,7 +62,8 @@ static partial class Program
             etat = EtatJeu.Jeu;
 
         }
-            
+        
+
     }
 
     /// <summary>Une image de jeu dans l'état Jeu.</summary>
