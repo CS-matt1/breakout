@@ -45,6 +45,10 @@ static partial class Program
     /// <summary>Indique si la balle est entièrement sortie par le bas de la fenêtre.</summary>
     static bool BalleSortieEnBas()
     {
+        //if (positionBalle.Y + RAYON_BALLE >= HAUTEUR)
+        //{
+        //    etat = EtatJeu.Perdu;
+        //}
         return false;
     }
 }

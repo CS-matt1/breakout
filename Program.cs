@@ -48,7 +48,20 @@ static partial class Program
         positionRaquette.X = LARGEUR / 2;
 
         positionRaquette.Y = HAUTEUR - MARGE_BAS_RAQUETTE;
+
+    bool[,] briques = new bool[LIGNES_BRIQUES, COLONNES_BRIQUES]; ;
+
         
+        
+            for (int ligne = 0; ligne < LIGNES_BRIQUES; ligne++)
+            {
+                for (int colonne = 0; colonne < COLONNES_BRIQUES; colonne++)
+                {
+                    briques[ligne, colonne] = true;
+                }
+            }
+        
+
     }
 
     /// <summary>Une image de jeu dans l'état Attente.</summary>
@@ -62,7 +75,6 @@ static partial class Program
             etat = EtatJeu.Jeu;
 
         }
-        
 
     }
 
@@ -73,6 +85,8 @@ static partial class Program
         DeplacerBalle(dt);
         RebondirSurMurs();
         RebondirSurRaquette();
+        
+
     }
 
     /// <summary>Une image de jeu dans les états Perdu et Gagne.</summary>
